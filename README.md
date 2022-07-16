@@ -1,2 +1,2 @@
 # python
-This is a repository that contains all my python work.
+This is a repository that contains some mini projects in python.
