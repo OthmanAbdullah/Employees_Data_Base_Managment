@@ -117,7 +117,7 @@ def init_info():
     submit_but.grid(row=6, column=0, padx=10, pady=10, columnspan=2)
 
     # Back button
-    Back_but = Button(root, text="Back >> ", command=Back)
+    Back_but = Button(root, text="Back >> ", command=Back_to_main)
     Back_but.grid(row=7, column=0, padx=10, pady=10, columnspan=2)
 
 def save_users () :
@@ -165,7 +165,7 @@ def new_user_addition():
     submit_but.grid(row=2, column=0, padx=10, pady=10, columnspan=2)
 
     # Back button
-    Back_but = Button(root, text="Back >> ", command= lambda :  Back2 (passowrd_label ,user_name_label , user_name ,  user_passowrd ))
+    Back_but = Button(root, text="Back >> ", command= lambda :  Back_homepage (passowrd_label ,user_name_label , user_name ,  user_passowrd ))
     Back_but.grid(row=4, column=0, padx=10, pady=10, columnspan=2)
 
 
@@ -213,7 +213,7 @@ def define_store () :
 
     global  Back_but
     # Back button
-    Back_but = Button(root, text="Back>> ", command= lambda :  Back2 (store_number_label ,Store_name_label , Store_name ,store_number    ))
+    Back_but = Button(root, text="Back>> ", command= lambda :  Back_homepage (store_number_label ,Store_name_label , Store_name ,store_number    ))
     Back_but.grid(row=4, column=0, padx=10, pady=10, columnspan=2)
 
 
@@ -501,7 +501,8 @@ def quesry():
 
 
 
-def Back2(passowrd_label , user_name_label , user_passowrd ,user_name  ):
+def Back_homepage(passowrd_label , user_name_label , user_passowrd ,user_name  ):
+
     passowrd_label.destroy ()
     submit_but.destroy()
     user_name_label.destroy()
@@ -511,7 +512,7 @@ def Back2(passowrd_label , user_name_label , user_passowrd ,user_name  ):
     quesry()
 
 
-def Back():
+def Back_to_main():
     Mail.destroy()
     Tax_Number.destroy()
     phone_num.destroy()
